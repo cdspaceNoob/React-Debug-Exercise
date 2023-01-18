@@ -20,6 +20,7 @@ const AddUser = (props) => {
             return;
         }
         event.preventDefault();
+        props.onAddUser(enteredUsername, enteredAge);
         console.log(enteredUsername, enteredAge);
         setEnteredAge("");
         setEnteredUsername("");

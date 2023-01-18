@@ -9,8 +9,11 @@ const UsersList = props => {
             <ul>
                 {/* UsersList는 App으로부터 users라는 배열을 받게 될 것이다. */}
                 {props.users.map((user) => {
-                    <li>{user.name} ({user.age} years old.)</li>
-                })}
+                    return (
+                        <li key={user.id}>{user.name} ({user.age} years old.)</li>
+                    )
+                }
+                )}
             </ul>
         </Card>
     );
